@@ -1,7 +1,3 @@
-# Как работать над проектом
-
-## Окружение
-# Server Configuration
 PORT=5000
 
 # Database Configuration
@@ -18,84 +14,82 @@ SALT=secret
 # File Storage
 UPLOAD_DIRECTORY=uploads
 
-Для удобства работы над проектом используются инструменты из **Node.js** и **npm**. Все необходимые настройки произведены. Убедитесь, что на рабочем компьютере установлен актуальный LTS релиз Node.js**. Актуальная версия **Node.js** указана в файле `package.json` в поле `node`. Затем, в терминале, перейдите в директорию с проектом и _единожды_ запустите команду:
+To facilitate working on the project, Node.js and npm tools are used. All necessary configurations have been made. Make sure that the latest LTS release of Node.js is installed on your computer. The required version of Node.js is specified in the node field in the package.json file. Then, in the terminal, navigate to the project directory and run the following command once:
 
 ```bash
 npm install
 ```
 
-Команда запустит процесс установки зависимостей проекта из **npm**.
 
-### Сценарии
+This command will start the process of installing the project dependencies from **npm**.
 
-В `package.json` предопределено несколько сценариев.
+### Scripts
 
-#### Скомпилировать проект
+Several scripts are predefined in the `package.json`.
+
+#### Compile the Project
 
 ```bash
 npm run compile
 ```
 
-Создаст директорию `dist` и скомпилирует проект.
+Creates the `dist` directory and compiles the project.
 
-#### Удалить скомпилированный проект
+#### Delete the Compiled Project
 
 ```bash
 npm run clean
 ```
 
-Удаляет директорию `dist`. Используется перед компиляцией.
 
-#### Собрать проект
+Deletes the `dist` directory. It is used before compilation.
+
+#### Build the project
 
 ```bash
 npm run build
 ```
 
-Выполняет сборку проекта: удаляет ранее скомпилированный проект и компилирует заново.
+Performs the project build: deletes the previously compiled project and recompiles it.
 
-#### Проверить линтером
+#### Check with Linter
 
 ```bash
 npm run lint
 ```
 
-Запуск проверки проекта статическим анализатором кода **ESLint**.
+Runs a static code analysis with the **ESLint** code linter.
 
-Линтер проверяет файлы только внутри директории `src`.
+The linter checks only the files inside the `src` directory.
 
-**Обратите внимание**, при запуске данной команды, ошибки выводятся в терминал.
+**Note**, when running this command, errors are displayed in the terminal.
 
-#### Запустить ts-модуль без компиляции
+#### Run a TypeScript Module without Compilation
 
 ```bash
-npm run ts -- <Путь к модулю с ts-кодом>
+npm run ts -- <path>
 ```
 
-Пакет `ts-node` позволяет выполнить TS-код в Node.js без предварительной компиляции. Используется только на этапе разработки.
+The `ts-node` package allows you to run TypeScript code in Node.js without prior compilation. It is used only during development.
 
-#### Запустить проект
+#### Run the project
 
 ```bash
 npm start
 ```
 
-В процессе запуска проекта будет выполнен процесс «Сборки проекта» и запуска результирующего кода.
+During the project startup, the "Build Project" process will be executed, and the resulting code will be run.
 
-## Структура проекта
+## Project Structure
 
-### Директория `src`
+### Directory `src`
 
-Исходный код проекта: компоненты, модули и так далее. Структура директории `src` может быть произвольной.
+The source code of the project: components, modules, and so on. The structure of the `src` directory can be arbitrary.
 
-### Файл `Readme.md`
+### File `Readme.md`
 
-Инструкции по работе с учебным репозиторием.
+Instructions on how to work with the educational repository.
 
-### Файл `Contributing.md`
+### File `Contributing.md`
 
-Советы и инструкции по внесению изменений в учебный репозиторий.
-
-### Остальное
-
-Все остальные файлы в проекте являются служебными. Пожалуйста, не удаляйте и не изменяйте их самовольно. Только если того требует задание или наставник.
+Guidelines and instructions for contributing to the educational repository.
